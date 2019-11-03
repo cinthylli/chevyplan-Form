@@ -1,1 +1,132 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root{
+
+  /* *******************************Color */
+  --color-blue-chevy: #154289;
+  --color-red-chevy:#942D46;
+  --color-purple-chevy:#6B3176;
+  --color-gray-darker-chevy:#232323;
+  --color-gray-dark-chevy:#4A4A4A;
+  --color-gray-chevy:#707070;
+  --color-gray-light-chevy:#E1E1E1;
+  --color-white-chevy:#ffffff;
+
+  /* *******************************Shadows */
+  --shadow: 7px 3px 6px rgba(0, 0, 0, 0.226);
+  /* *******************************width */
+  --width-single: 360px;
+  --width-double: 180px;
+  /* *******************************Spaces */
+  --space-single: 20px;
+  --space-double: 40px;
+
+  /* *******************************Height */
+  --height-normal: 35px;
+}
+
+body{
+  margin:0px;
+  padding: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+/* -------------------------background */
+  background: url('../src/assets/img/viagem.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+/* -------------------------background */
+}
+
+/* *******************************Headings */
+h1{
+  font: Bold italic 36px 2.25rem;
+  color:var(--color-gray-darker-chevy);
+}
+h2{
+  font: Bold italic 20px 1.25rem;
+  color:var(--color-gray-darker-chevy);
+}
+h3{
+  font: normal 16px/1rem;
+  color:var(--color-gray-chevy);
+}
+h4{
+  font: normal 15px 0.93rem;
+  color:var(--color-gray-chevy);
+}
+h5{
+  font: normal 14px 0.85rem;
+  color:var(--color-gray-chevy);
+}
+.left h1, .left h3{
+  color:var(--color-white-chevy);
+}
+
+/* *******************************Containers */
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.25);
+  height: 100vh;
+  width: 100vw;
+}
+
+.container-2 {
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: first baseline;
+}
+
+.container-2c {
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.container-3{
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+/* *******************************Right */
+.right{
+  position: relative;
+  background: #FFFFFFA1 0% 0% no-repeat padding-box;
+  box-shadow: 7px 3px 6px #000000C4;
+  padding:20px;
+  width: 30%;
+  height: min-content;
+  margin:50px;
+}
+
+/* *******************************Left */
+.left{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px;
+  width: 30%;
+  margin:50px;
+}
+
+/* *******************************Center */
+.center{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
