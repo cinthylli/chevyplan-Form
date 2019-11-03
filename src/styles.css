@@ -40,28 +40,33 @@ body{
 
 /* *******************************Headings */
 h1{
-  font: Bold italic 36px 2.25rem;
+  font-style: italic;
+  font-size: 36px 2.25rem;
+  font-weight: bold;
   color:var(--color-gray-darker-chevy);
 }
 h2{
-  font: Bold italic 20px 1.25rem;
+  font-size:20px 1.25rem ;
+  font-weight: bold;
+  font-style: italic;
   color:var(--color-gray-darker-chevy);
 }
 h3{
-  font: normal 16px/1rem;
+  font-size: 16px 1rem;
+  font-weight: normal;
   color:var(--color-gray-chevy);
 }
 h4{
-  font: normal 15px 0.93rem;
+  font-size: 15px 0.93rem;
+  font-weight: normal;
   color:var(--color-gray-chevy);
 }
 h5{
-  font: normal 14px 0.85rem;
+  font-size: 14px 0.85rem;
+  font-weight: normal;
   color:var(--color-gray-chevy);
 }
-.left h1, .left h3{
-  color:var(--color-white-chevy);
-}
+
 
 /* *******************************Containers */
 .container{
@@ -92,15 +97,7 @@ h5{
   width: 100%;
 }
 
-.container-3{
-  position: relative;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-}
+
 
 /* *******************************Right */
 .right{
@@ -113,16 +110,7 @@ h5{
   margin:50px;
 }
 
-/* *******************************Left */
-.left{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 10px;
-  width: 30%;
-  margin:50px;
-}
+
 
 /* *******************************Center */
 .center{
