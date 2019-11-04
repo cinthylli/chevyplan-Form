@@ -8,95 +8,112 @@
       <h2>¿QUÉ ESPERAS PARA CUMPLIR TU SUEÑO?</h2>
       <h3>Deja tus datos y nos comunicaremos contigo</h3>
     </div>
-    <form (ngSubmit)="onSaveProspect(f)" #f="ngForm">
+    <form class="container-f" (ngSubmit)="onSaveProspect(f)" #f="ngForm">
       <div class="container-2">
-          <input
-          type="text"
-          name="name"
-          placeholder="Nombre Completo" autocomplete="name"
-          inputmode="text"
-          class="form-control"
-          ngModel
-          autofocus
-          required
-          pattern="\b[ñáéíóúÁÉÍÓÚÑa-zA-Z ]+\b"
-          #name>
+        <input
+        type="text"
+        name="name"
+        placeholder="Nombre Completo" autocomplete="name"
+        inputmode="text"
+        class="form-control input-1"
+        ngModel
+        autofocus
+        required
+        pattern="\b[ñáéíóúÁÉÍÓÚÑa-zA-Z ]+\b"
+        #name>
+
       </div>
+      <!-- <div [hidden]="name.valid || name.pristine"
+      class="alert-danger">
+      Campo Requerido
+      </div> -->
       <div class="container-2">
         <div class="select-custom">
-          <select  required class="form-control" name="documentType" required ngModel >
-            <option disabled selected hidden>Tipo de Documento</option>
+          <select  required class="form-control" name="documentType" required ngModel #documentType>
+            <option value="" disabled selected hidden>Tipo de Documento</option>
             <option
             *ngFor="let doc of documentTypes" [value]="doc"> {{doc}} </option>
           </select>
+          <!-- <div [hidden]="documentType.valid || documentType.pristine"
+      class="alert-danger">
+      Campo Requerido
+      </div> -->
         </div>
-      <div class="container-2">
         <input
         type="tel"
         placeholder="Número de Documento" inputmode="numeric"
         name="documentId"
-        class="form-control"
+        class="form-control input-2"
         pattern="[\d]{6,10}"
         required
+        #documentId
         ngModel>
       </div>
-      </div>
+      <!-- <div [hidden]="documentId.valid || documentId.pristine"
+      class="alert-danger">
+      Campo Requerido
+      </div> -->
       <div class="container-2">
         <div class="select-custom">
           <select
-          class="form-control"
+          class="form-control input-2"
           name="country"
           ngModel
           required
           #country>
-            <option
-            disabled
-            selected
-            hidden>País</option>
-            <option *ngFor="let country of countries" [value]="country"> {{country.name}} </option>
-          </select>
-        </div>
-        <div class="container-2">
-          <input
-          type="tel"
-          placeholder="Celular" autocomplete="tel"
-          name="phoneNumber"
-          inputmode="tel"
-          class="form-control"
-          pattern="[\d]{10}"
-          ngModel
-          required
-          #phone>
-        </div>
+          <option
+          value=""
+          disabled
+          selected
+          hidden>País</option>
+          <option *ngFor="let country of countries" [value]="country"> {{country.name}} </option>
+        </select>
+        <!-- <div [hidden]="country.valid || country.pristine"
+        class="alert-danger">
+        Campo Requerido
+        </div> -->
       </div>
-      <div class="container-2">
-        <input
-        type="email"
-        placeholder="Correo Electrónico"
-        name="email"
-        autocomplete="email"
-        inputmode="email"
-        class="form-control"
-        pattern="[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
-        required
+      <input
+        type="tel"
+        placeholder="Celular" autocomplete="tel"
+        name="phoneNumber"
+        inputmode="tel"
+        class="form-control input-2"
+        pattern="[\d]{10}"
         ngModel
-        #email>
-      </div>
-      <div class="container-3">
-          <input
-          type="checkbox"
-          class="form-control"
-          name="acceptTerms"
-          required
-          ngModel >
-          <h5>Leí y acepto condiciones de la <a href="https://www.chevyplan.com.co/SitePages/privacidad.aspx">política de privacidad</a></h5>
-      </div>
-      <div class="container-2">
-        <button
-        class="btn center"
-        [disabled]="!f.valid">ENVIAR</button>
-      </div>
-    </form>
-  </div>
+        required
+        #phone>
+    </div>
+    <!-- <div [hidden]="phoneNumber.valid || phoneNumber.pristine"
+        class="alert-danger">
+        Campo Requerido
+        </div> -->
+    <div class="container-2">
+      <input
+      type="email"
+      placeholder="Correo Electrónico"
+      name="email"
+      autocomplete="email"
+      inputmode="email"
+      class="form-control input-1"
+      pattern="[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+      required
+      ngModel
+      #email>
+    </div>
+    <div class="container-3">
+      <input
+      type="checkbox"
+      class="form-control"
+      name="acceptTerms"
+      required
+      ngModel >
+      <h5>Leí y acepto condiciones de la <a href="https://www.chevyplan.com.co/SitePages/privacidad.aspx">política de privacidad</a></h5>
+    </div>
+    <div class="center">
+      <button [disabled]="!f.valid"><h2 class="button-text">ENVIAR</h2></button>
+    </div>
+  </form>
+</div>
 </div>
 <router-outlet></router-outlet>
